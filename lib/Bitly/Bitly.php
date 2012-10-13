@@ -81,7 +81,7 @@ Class Bitly
             $this->_bitlyApi,
             $this->getActiveLogin(),
             $this->getActiveKey(),
-            $originalUrl
+            urlencode($originalUrl)
         );
         if ($this->_domain != 'bit.ly') {
             $url .= "&domain=" . $this->_domain;
